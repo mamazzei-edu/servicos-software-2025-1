@@ -25,3 +25,11 @@ services:
       - 8080:8080
     volumes:
       - /code
+  gradio-image:
+    build:
+      context: gradio-image
+      dockerfile: Dockerfile 
+    ports:
+      - 7861:7860
+    volumes:
+      - /work
