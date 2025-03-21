@@ -2,6 +2,7 @@ import gradio as gr
 import requests
 import json
 
+# Comentário para atualização do repositório
 def envia(json_text):
     objeto_json = json.loads(json_text)
     url = "http://backend-json:8080/json/"
