@@ -12,5 +12,13 @@ app = FastAPI()
 def diz_ola():
     return {"Olá" : "Mundo"}
 
+class Item(BaseModel):
+    name: str
+    valor: float
+    descricao: Optional[str] = None
 
+@app.post("/json/")
+async def upload_json(item:Item):
+    return "Recebido objeto com nome: " + item.name
+    
 
