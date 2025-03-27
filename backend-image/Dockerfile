@@ -16,4 +16,5 @@ RUN python3 -m pip install keras
 
 EXPOSE 9001
 
+
 CMD gunicorn --bind 0.0.0.0:9001 --workers 1 --timeout 0 images.webservice:app -k uvicorn.workers.UvicornWorker
