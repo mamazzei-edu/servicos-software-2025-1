@@ -71,3 +71,13 @@ services:
         target: /app/webservice.py
     volumes:
       - /app
+
+  treinamento-treina:
+    build:
+      context: treinamento-treina
+      dockerfile: Dockerfile
+    ports: 
+      - 7001:7000
+    volumes:
+      - /ml
+    
